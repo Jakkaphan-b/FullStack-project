@@ -1,0 +1,8 @@
+SHOW DATABASES; //โชว์ฐานข้อมูล
+CREATE DATABASE NAME //สร้างฐานข้อมูล
+
+
+npx prisma db pull
+npx prisma migtare dev --name update_customers_schema //อัปเดต data base
+
+ใส่ comment อธิบายแต่ละส่วน
