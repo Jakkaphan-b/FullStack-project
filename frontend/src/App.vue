@@ -4,20 +4,28 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <q-layout view="hHh lpR fFf">
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <q-header elevated class="bg-primary text-white" height-hint="98">
+      <q-toolbar>
+        <q-toolbar-title>
+          MiniStore
+        </q-toolbar-title>
+        <q-tabs align="left">
+        <q-route-tab to="/" label="Home" />
+        <q-route-tab to="/Create" label="Create" />
+        <q-route-tab to="/Update" label="Update" />
+        <q-route-tab to="/About" label="About" />
+      </q-tabs>
+      </q-toolbar>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+    </q-header>
 
-  <RouterView />
+    <q-page-container>
+      <router-view />
+    </q-page-container>
+
+  </q-layout>
 </template>
 
 <style scoped>
